@@ -1,0 +1,53 @@
+.bg-header{
+    background-color: rgb(245, 245, 245);
+}
+.dubizzle{
+    margin-top: -10px !important;
+}
+
+.checker{
+    border: 1px solid lightgray;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.checker:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.checker_active{
+    border: 1px solid red;
+    background-color:pink;
+    padding: 5px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+input[type='radio']{
+    accent-color: red;
+}
+
+.post{
+    padding: 10px 35px;
+    background-color: red;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 7px;
+    border: none;
+}
+
+.post:hover{
+    cursor: pointer;
+    background-color: rgb(216, 2, 2);
+}
+
+.item:hover{
+    background-color:  rgb(245, 245, 245);
+}
+
+.imgs{
+    width: 104px;
+    height: 104px;
+}

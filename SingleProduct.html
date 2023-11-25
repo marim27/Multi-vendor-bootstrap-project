@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Product Page</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="./images/ficon2.png" />
+    <style>
+        .body {
+            font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+        }
+
+        .overlay2 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+        }
+
+        .close-overlay {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* //////////// add classes */
+        /* #carouselNB {
+            position: absolute;
+            top: 50%;
+            right: 2vw;
+        }
+
+        #carouselPB {
+
+            position: absolute;
+            top: 50%;
+            left: 2vw;
+
+        }
+
+        #carouselNT {
+            position: absolute;
+            top: 15vw;
+            left: 5vw;
+        }
+
+        #carouselPT {
+            position: absolute;
+            top: 15vw;
+            right: 5vw;
+        } */
+
+        /* //////////// add classes */
+
+        .close-overlay2 {
+            position: absolute;
+            top: 2px;
+            right: 10px;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .pagination {
+            text-align: center;
+        }
+
+        .prev,
+        .next {
+            background-color: rgba(0, 0, 0, .4);
+            border-radius: 50%;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+            padding: 10px 15px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .next {
+            right: 20px;
+        }
+
+        .image-number {
+            color: white;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 16px;
+        }
+
+        .comp-logo-img {
+            width: 160px;
+            height: 52px;
+        }
+
+        .loc-img {
+            position: relative;
+        }
+
+        .loc-btn {
+            position: absolute;
+            top: 295%;
+            left: 35%;
+        }
+
+        .main-add {
+            background-color: rgba(0, 0, 0, .4);
+            width: 5vh;
+            height: 5vh;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .adds {
+            border: solid 1px black;
+            background-color: white;
+            width: 5vh;
+            height: 5vh;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0 -6px;
+        }
+
+        .cards-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .card img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .card {
+            margin: 0 1.5em;
+        }
+
+        .chato:hover {
+            background-color: #FEF5F5;
+        }
+
+        .showPhone:hover {
+            background-color: #BA0000 !important;
+        }
+
+        @media (min-width: 768px) {
+            .card img {
+                height: 11em;
+            }
+        }
+
+        @media (max-width: 767px) {
+            #carouselExampleCaptions {
+                display: none;
+            }
+        }
+
+        @media (min-width: 768px) {
+            #carouselExampleCaptions2 {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-xxl-8">
+                <div id="carouselExampleIndicators" class="carousel slide gallery">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./images/1.jpeg" class="d-block w-100 rounded imgo img-fluid" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/2.jpeg" class="d-block w-100 rounded imgo img-fluid" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/3.jpeg" class="d-block w-100 rounded imgo img-fluid" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/4.jpeg" class="d-block w-100 rounded imgo img-fluid" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/5.jpeg" class="d-block w-100 rounded imgo img-fluid" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev main-add" type="button"
+                        data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span id="carouselPT" id="carouselPT" class="carousel-control-prev-icon"
+                            aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next main-add" type="button"
+                        data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span id="carouselNT" class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="mt-3 border rounded p-3">
+                    <div>
+                        <div class="row">
+                            <div class="col-6">
+                                <h1 class="fw-bold" style="color: #E00000;">EGP 963,100</h1>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end fs-4">
+                                <i class="bi bi-share me-3"></i>
+                                <i class="bi bi-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold mt-3">فيلا للبيع في نايا ويست الشيخ زايد بالتقسيط علي 9 سنوات Naia West</h5>
+                    <div class="mt-3">
+                        <div class="row">
+                            <div class="col-6 d-flex align-items-center">
+                                <div class="d-flex fs-6 fw-semibold" style="color: #737577;">
+                                    <i class="bi bi-geo-alt me-2"></i>
+                                    <p class="m-0">Sheikh Zayed, Giza</p>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end align-items-center">
+                                <p class="m-0">2 days ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3 border rounded p-3">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <h4>Details</h4>
+                        </div>
+                        <div class="col-3">
+                            <p>Type</p>
+                            <p>Price Type</p>
+                            <p>Bedrooms</p>
+                            <p>Furnished</p>
+                            <p>Delivery Date</p>
+                            <p>Video</p>
+                        </div>
+                        <div class="col-3 fw-bold">
+                            <p>Twin House</p>
+                            <p>Price</p>
+                            <p>4</p>
+                            <p>No</p>
+                            <p>2026</p>
+                            <p>Not Available</p>
+                        </div>
+                        <div class="col-3">
+                            <p>Price</p>
+                            <p>Area (m²)</p>
+                            <p>Bathrooms</p>
+                            <p>Payment Option</p>
+                            <p>Delivery Term</p>
+                            <p>Virtual Tour</p>
+                        </div>
+                        <div class="col-3">
+                            <p>963,100</p>
+                            <p>295</p>
+                            <p>4</p>
+                            <p>Cash or Installment</p>
+                            <p>Not Finished</p>
+                            <p>Not Available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3 border rounded p-3">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <h4>Description</h4>
+                        </div>
+                        <div class="col-12">
+                            <p>امتلك فيلتك في كمبوند نايا ويست Naia west بجوار سوديك علي الصحراوي مباشرة في الشيخ زايد
+                                الجديدة بالتقسيط علي 9 سنوات </p>
+                        </div>
+                        <div class="col-12">
+                            <p>موقع المشروع:
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <p>- مباشرة على طريق مصر اسكندرية الصحراوي بجانب سوديك و إعمار مباشرة <br>
+                                -3 دقائق من مطار سفنكس الدولي<br>
+                                -7 دقائق من المحور<br>
+                                -7 دقائق من مول العرب<br>
+                                -10 دقائق من المتحف الكبير<br>
+                                -15 دقيقة من مول مصر<br>
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <p>
+                                مساحة المشروع <br>
+                                140 فدان
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <p>
+                                فيلات فخمه بتصميم كلاسيكي جديد <br>
+                                بواسطة <br>
+                                RMC رأفت ميلر <br>
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <p>
+                                الخدمات والمرافق Naia west <br>
+                                - مدرسة دولية<br>
+                                -منطقة تجارية<br>
+                                - مباني اداريه<br>
+                                - مركز عيادات<br>
+                                - كلوب هاوس<br>
+                                - بحيرات صناعيه <br>
+                                - حمامات سباحه <br>
+                                - كيدز اريا <br>
+                                - منطقة ترفيهية<br>
+                                - فوود كورت<br>
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <p>
+                                مساحة المباني : 255 متر <br>
+                                مساحة الأرض : 269 متر <br>
+                                مساحة الحديقة : 172 متر <br>
+                                مساحة الرووف : 40 متر <br>
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <p>
+                                3 غرف نوم<br>
+                                غرفة معيشة<br>
+                                4 حمام<br>
+                                ريسيبشن<br>
+                                2 تيراس<br>
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <p>
+                                السعر: 9,631,000
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <p>
+                                التقسيط علي 9 سنوات
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <p>
+                                لمزيد من التفاصيل تواصل بإتصال أو واتس أب علي 01007087576 <br>
+                                متواجدين 24 ساعه للرد علي أي استفسار<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3 border rounded p-3">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <h4>Amenities</h4>
+                        </div>
+                        <div class="col-12 d-flex" style="flex-wrap: wrap;">
+                            <div class="border p-2 rounded border-secondary-subtle me-2 mb-2">
+                                <p class="m-0">Balcony</p>
+                            </div>
+                            <div class="border p-2 rounded border-secondary-subtle me-2 mb-2">
+                                <p class="m-0">Private Garden</p>
+                            </div>
+                            <div class="border p-2 rounded border-secondary-subtle me-2 mb-2">
+                                <p class="m-0">Security</p>
+                            </div>
+                            <div class="border p-2 rounded border-secondary-subtle me-2 mb-2">
+                                <p class="m-0">Pets Allowed</p>
+                            </div>
+                            <div class="border p-2 rounded border-secondary-subtle me-2 mb-2">
+                                <p class="m-0">Pool</p>
+                            </div>
+                            <div class="border p-2 rounded border-secondary-subtle me-2 mb-2">
+                                <p class="m-0">Electricity Meter</p>
+                            </div>
+                            <div class="border p-2 rounded border-secondary-subtle me-2 mb-2">
+                                <p class="m-0">Water Meter</p>
+                            </div>
+                            <div class="border p-2 rounded border-secondary-subtle me-2 mb-2">
+                                <p class="m-0">Natural Gas</p>
+                            </div>
+                            <div class="border p-2 rounded border-secondary-subtle me-2 mb-2">
+                                <p class="m-0">Landline</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3 border rounded p-3">
+                    <div class="row">
+                        <div class="col-12 mb-2">
+                            <h4>Location</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex fs-6 fw-semibold" style="color: black;">
+                                    <i class="bi bi-geo-alt me-2"></i>
+                                    <p class="m-0">Sheikh Zayed, Giza</p>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-2">
+                                <div class="loc-img">
+                                    <img src="./images/1000x500.png" alt="" class="w-100 rounde">
+                                </div>
+                                <button
+                                    class="d-flex fs-6 fw-semibold border border-danger-subtle justify-content-center loc-btn p-2 rounded"
+                                    style="color: black; background-color: white;">
+                                    <i class="bi bi-geo-alt me-2"></i>
+                                    <p class="m-0">See location</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay2 col-xxl-12">
+                    <div class="overlay2">
+                        <img class="overlay-image2" src="" alt="">
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <div class="row">
+                        <div class="col-6 d-flex align-items-center">
+                            <div class="d-flex fs-6 fw-semibold">
+                                <p class="m-0">AD ID 198183035</p>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end align-items-center">
+                            <div class="d-flex fs-6 fw-bold">
+                                <i class="bi bi-flag me-2" style="color: #E00000;"></i>
+                                <p class="m-0">Report this ad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3 border h-0"></div>
+                <div class="mt-3  mb-5">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <h4>Related ads</h4>
+                        </div>
+                        <div class="col-12 mb-2">
+                            <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="card-group">
+                                            <div class="card border">
+                                                <img src="./images/1.jpeg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-7 d-flex align-items-center pe-0">
+                                                            <div class="d-flex fw-semibold fs-5">
+                                                                <p class="card-title" style="color: #E00000;">EGP
+                                                                    1,240,440</p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                            <div class="d-flex fw-bold">
+                                                                <i class="bi bi-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="card-text">This is a wider card with supporting text below
+                                                        as a natural lead-in to additional content. This content is a
+                                                        little bit longer.</p>
+                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                            ago</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="card border">
+                                                <img src="./images/2.jpeg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-7 d-flex align-items-center pe-0">
+                                                            <div class="d-flex fw-semibold fs-5">
+                                                                <p class="card-title" style="color: #E00000;">EGP
+                                                                    1,240,440</p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                            <div class="d-flex fw-bold">
+                                                                <i class="bi bi-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="card-text">This card has supporting text below as a
+                                                        natural lead-in to additional content.</p>
+                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                            ago</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="card border">
+                                                <img src="./images/3.jpeg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-7 d-flex align-items-center pe-0">
+                                                            <div class="d-flex fw-semibold fs-5">
+                                                                <p class="card-title" style="color: #E00000;">EGP
+                                                                    1,240,440</p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                            <div class="d-flex fw-bold">
+                                                                <i class="bi bi-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="card-text">This is a wider card with supporting text below
+                                                        as a natural lead-in to additional content. This card has even
+                                                        longer content than the first to show that equal height action.
+                                                    </p>
+                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                            ago</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card-group">
+                                            <div class="card border">
+                                                <img src="./images/4.jpeg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-7 d-flex align-items-center pe-0">
+                                                            <div class="d-flex fw-semibold fs-5">
+                                                                <p class="card-title" style="color: #E00000;">EGP
+                                                                    1,240,440</p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                            <div class="d-flex fw-bold">
+                                                                <i class="bi bi-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="card-text">This is a wider card with supporting text below
+                                                        as a natural lead-in to additional content. This content is a
+                                                        little bit longer.</p>
+                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                            ago</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="card border">
+                                                <img src="./images/5.jpeg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-7 d-flex align-items-center pe-0">
+                                                            <div class="d-flex fw-semibold fs-5">
+                                                                <p class="card-title" style="color: #E00000;">EGP
+                                                                    1,240,440</p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                            <div class="d-flex fw-bold">
+                                                                <i class="bi bi-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="card-text">This card has supporting text below as a
+                                                        natural lead-in to additional content.</p>
+                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                            ago</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="card border">
+                                                <img src="./images/6.jpeg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-7 d-flex align-items-center pe-0">
+                                                            <div class="d-flex fw-semibold fs-5">
+                                                                <p class="card-title" style="color: #E00000;">EGP
+                                                                    1,240,440</p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                            <div class="d-flex fw-bold">
+                                                                <i class="bi bi-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="card-text">This is a wider card with supporting text below
+                                                        as a natural lead-in to additional content. This card has even
+                                                        longer content than the first to show that equal height action.
+                                                    </p>
+                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                            ago</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card-group">
+                                            <div class="card border">
+                                                <img src="./images/7.jpeg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-7 d-flex align-items-center pe-0">
+                                                            <div class="d-flex fw-semibold fs-5">
+                                                                <p class="card-title" style="color: #E00000;">EGP
+                                                                    1,240,440</p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                            <div class="d-flex fw-bold">
+                                                                <i class="bi bi-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="card-text">This is a wider card with supporting text below
+                                                        as a natural lead-in to additional content. This content is a
+                                                        little bit longer.</p>
+                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                            ago</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="card border">
+                                                <img src="./images/8.jpeg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-7 d-flex align-items-center pe-0">
+                                                            <div class="d-flex fw-semibold fs-5">
+                                                                <p class="card-title" style="color: #E00000;">EGP
+                                                                    1,240,440</p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                            <div class="d-flex fw-bold">
+                                                                <i class="bi bi-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="card-text">This card has supporting text below as a
+                                                        natural lead-in to additional content.</p>
+                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                            ago</small></p>
+                                                </div>
+                                            </div>
+                                            <div class="card border">
+                                                <img src="./images/1.jpeg" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-7 d-flex align-items-center pe-0">
+                                                            <div class="d-flex fw-semibold fs-5">
+                                                                <p class="card-title" style="color: #E00000;">EGP
+                                                                    1,240,440</p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                            <div class="d-flex fw-bold">
+                                                                <i class="bi bi-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="card-text">This is a wider card with supporting text below
+                                                        as a natural lead-in to additional content. This card has even
+                                                        longer content than the first to show that equal height action.
+                                                    </p>
+                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                            ago</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev adds" type="button"
+                                    data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                    <span id="carouselPB" class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next adds" type="button"
+                                    data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                    <span id="carouselNB" class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <dv class="col-12 mb-2">
+                            <div id="carouselExampleCaptions2" class="carousel carousel-dark slide"
+                                data-bs-ride="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="card border">
+                                            <img src="./images/1.jpeg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-7 d-flex align-items-center pe-0">
+                                                        <div class="d-flex fw-semibold fs-5">
+                                                            <p class="card-title" style="color: #E00000;">EGP
+                                                                1,240,440</p>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                        <div class="d-flex fw-bold">
+                                                            <i class="bi bi-heart"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="card-text">This is a wider card with supporting text below
+                                                    as a natural lead-in to additional content. This card has even
+                                                    longer content than the first to show that equal height action.
+                                                </p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                        ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card border">
+                                            <img src="./images/1.jpeg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-7 d-flex align-items-center pe-0">
+                                                        <div class="d-flex fw-semibold fs-5">
+                                                            <p class="card-title" style="color: #E00000;">EGP
+                                                                1,240,440</p>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                        <div class="d-flex fw-bold">
+                                                            <i class="bi bi-heart"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="card-text">This is a wider card with supporting text below
+                                                    as a natural lead-in to additional content. This card has even
+                                                    longer content than the first to show that equal height action.
+                                                </p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                        ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card border">
+                                            <img src="./images/1.jpeg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-7 d-flex align-items-center pe-0">
+                                                        <div class="d-flex fw-semibold fs-5">
+                                                            <p class="card-title" style="color: #E00000;">EGP
+                                                                1,240,440</p>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                        <div class="d-flex fw-bold">
+                                                            <i class="bi bi-heart"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="card-text">This is a wider card with supporting text below
+                                                    as a natural lead-in to additional content. This card has even
+                                                    longer content than the first to show that equal height action.
+                                                </p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                        ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card border">
+                                            <img src="./images/1.jpeg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-7 d-flex align-items-center pe-0">
+                                                        <div class="d-flex fw-semibold fs-5">
+                                                            <p class="card-title" style="color: #E00000;">EGP
+                                                                1,240,440</p>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                        <div class="d-flex fw-bold">
+                                                            <i class="bi bi-heart"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="card-text">This is a wider card with supporting text below
+                                                    as a natural lead-in to additional content. This card has even
+                                                    longer content than the first to show that equal height action.
+                                                </p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                        ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card border">
+                                            <img src="./images/1.jpeg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-7 d-flex align-items-center pe-0">
+                                                        <div class="d-flex fw-semibold fs-5">
+                                                            <p class="card-title" style="color: #E00000;">EGP
+                                                                1,240,440</p>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                        <div class="d-flex fw-bold">
+                                                            <i class="bi bi-heart"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="card-text">This is a wider card with supporting text below
+                                                    as a natural lead-in to additional content. This card has even
+                                                    longer content than the first to show that equal height action.
+                                                </p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                        ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card border">
+                                            <img src="./images/1.jpeg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-7 d-flex align-items-center pe-0">
+                                                        <div class="d-flex fw-semibold fs-5">
+                                                            <p class="card-title" style="color: #E00000;">EGP
+                                                                1,240,440</p>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                        <div class="d-flex fw-bold">
+                                                            <i class="bi bi-heart"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="card-text">This is a wider card with supporting text below
+                                                    as a natural lead-in to additional content. This card has even
+                                                    longer content than the first to show that equal height action.
+                                                </p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                        ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card border">
+                                            <img src="./images/1.jpeg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-7 d-flex align-items-center pe-0">
+                                                        <div class="d-flex fw-semibold fs-5">
+                                                            <p class="card-title" style="color: #E00000;">EGP
+                                                                1,240,440</p>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                        <div class="d-flex fw-bold">
+                                                            <i class="bi bi-heart"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="card-text">This is a wider card with supporting text below
+                                                    as a natural lead-in to additional content. This card has even
+                                                    longer content than the first to show that equal height action.
+                                                </p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                        ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card border">
+                                            <img src="./images/1.jpeg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-7 d-flex align-items-center pe-0">
+                                                        <div class="d-flex fw-semibold fs-5">
+                                                            <p class="card-title" style="color: #E00000;">EGP
+                                                                1,240,440</p>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                        <div class="d-flex fw-bold">
+                                                            <i class="bi bi-heart"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="card-text">This is a wider card with supporting text below
+                                                    as a natural lead-in to additional content. This card has even
+                                                    longer content than the first to show that equal height action.
+                                                </p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                        ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card border">
+                                            <img src="./images/1.jpeg" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-7 d-flex align-items-center pe-0">
+                                                        <div class="d-flex fw-semibold fs-5">
+                                                            <p class="card-title" style="color: #E00000;">EGP
+                                                                1,240,440</p>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="col-5 d-flex justify-content-end align-items-center ps-0">
+                                                        <div class="d-flex fw-bold">
+                                                            <i class="bi bi-heart"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="card-text">This is a wider card with supporting text below
+                                                    as a natural lead-in to additional content. This card has even
+                                                    longer content than the first to show that equal height action.
+                                                </p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                        ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev adds" type="button"
+                                    data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
+                                    <span id="carouselPB" class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next adds" type="button"
+                                    data-bs-target="#carouselExampleCaptions2" data-bs-slide="next">
+                                    <span id="carouselNB" class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </dv>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-4">
+                <div class="d-flex justify-content-between align-items-center mt-3 border rounded p-3"
+                    style="flex-wrap: wrap;">
+                    <div class="ms-2 me-4">
+                        <h6 class="fw-bold">Company</h6>
+                        <p class="m-0">member since nove 2020</p>
+                        <p>comm ID: 3215142</p>
+                        <h6 style="color: #E00000 ; font-weight: bold;">See profile <i
+                                class="fa-solid fa-chevron-right"></i></h6>
+                    </div>
+                    <div>
+                        <img src="./images/584-400x300.jpeg" class="rounded comp-logo-img" alt="">
+                    </div>
+                    <div class="w-100">
+                        <div style="background-color: #E00000; color: white;"
+                            class="d-flex justify-content-center align-items-center fs-5 fw-semibold rounded pt-2 pb-2 mx-1 mt-3 showPhone">
+                            <i class="bi bi-telephone me-2"></i>
+                            <p class="m-0">Show Phone Number</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center fs-5 fw-semibold rounded 
+                            pt-2 pb-2 mx-1 mt-3 border border-danger chato">
+                            <i class="bi bi-wechat me-2" style="color: #E00000;"></i>
+                            <p class="m-0">Chat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border rounded mt-3 p-3">
+                    <h4>Your safety matters to us!</h4>
+                    <ul>
+                        <li>Only meet in public / crowded places for example metro stations and malls.</li>
+                        <li>Never go alone to meet a buyer / seller, always take someone with you.</li>
+                        <li>Check and inspect the product properly before purchasing it.</li>
+                        <li>Never pay anything in advance or transfer money before inspecting the product.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="overlay col-xxl-12">
+                        <div class="overlay">
+                            <img class="overlay-image" src="" alt="">
+                            <div class="pagination">
+                                <button class="prev"><i class="fa fa-chevron-left"></i></button>
+                                <button class="next"><i class="fa fa-chevron-right"></i></button>
+                            </div>
+                            <p id="image-number" class="image-number"></p>
+                            <span class="close-overlay">X</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+    <script src="JQuery/jquery-3.7.0.min.js"></script>
+    <script src="./bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/5d6f98b5d1.js" crossorigin="anonymous"></script>
+
+    <script>
+        $('.imgo').click(function () {
+            var src = $(this).attr('src');
+            var index = $(this).parent().index() + 1;
+            var total = $('.gallery img').length;
+            $('.overlay-image').attr('src', src);
+            $('#image-number').text(index + ' / ' + total);
+            $('.overlay').css('display', 'flex').fadeIn();
+            // console.log("zzzzzzzzzzzzzzzz");
+        });
+
+        $('.overlay').click(function (e) {
+            if (e.target === this) {
+                $('.overlay').fadeOut();
+            }
+        });
+
+        $('.prev').click(function () {
+            var currentImage = $('.overlay-image').attr('src');
+            var prevImage = $('.gallery .carousel-item:has(img[src="' + currentImage + '"])').prev().find('img').attr('src');
+            if (prevImage) {
+                $('.overlay-image').attr('src', prevImage);
+            } else {
+                var firstImage = $('.gallery .carousel-item').last().find('img').attr('src');
+                $('.overlay-image').attr('src', firstImage);
+            }
+            updateImageNumber();
+        });
+        $('.next').click(function () {
+            var currentImage = $('.overlay-image').attr('src');
+            var nextImage = $('.gallery .carousel-item:has(img[src="' + currentImage + '"])').next().find('img').attr('src');
+            if (nextImage) {
+                $('.overlay-image').attr('src', nextImage);
+            } else {
+                var lastImage = $('.gallery .carousel-item').first().find('img').attr('src');
+                $('.overlay-image').attr('src', lastImage);
+            }
+            updateImageNumber();
+        });
+        function updateImageNumber() {
+            var currentImage = $('.overlay-image').attr('src');
+            var imageIndex = $('.gallery img').index($('.gallery img[src="' + currentImage + '"]')) + 1;
+            var totalImages = $('.gallery img').length;
+            $('#image-number').text(imageIndex + " / " + totalImages);
+        }
+        $('.close-overlay').click(function () {
+            $('.overlay').fadeOut();
+        });
+
+        $('.loc-btn').click(function () {
+            var src = $('.loc-img img').attr('src');
+            $('.overlay-image2').attr('src', src);
+            $('.overlay2').css('display', 'flex').fadeIn();
+        });
+
+        $('.close-overlay2').click(function () {
+            $('.overlay2').fadeOut();
+        });
+
+        $('.overlay2').click(function (e) {
+            if (e.target === this) {
+                $('.overlay2').fadeOut();
+            }
+        });
+
+
+    </script>
+
+    <script>
+
+        // Function to load and insert HTML content
+
+        //   
+        function loadAndInsert(url, targetElement) {
+            fetch(url)
+                .then((response) => response.text())
+                .then((content) => {
+                    document.querySelector(targetElement).innerHTML = content;
+                    const scripts = document.querySelectorAll(`${targetElement} script`);
+                    scripts.forEach((script) => {
+                        const newScript = document.createElement("script");
+                        newScript.textContent = script.textContent;
+                        document.querySelector(targetElement).appendChild(newScript);
+                    });
+                })
+                .catch((error) => {
+                    console.error("Error loading " + url, error);
+                });
+        }
+
+
+
+
+        // Load header.html and insert into <header> element
+
+        loadAndInsert("./h&f/header.html", ".header");
+
+
+
+
+
+
+        // Load footer.html and insert into <footer> element
+
+        loadAndInsert("./h&f/footer.html", ".footer");
+
+    </script>
+
+
+</body>
+
+</html>

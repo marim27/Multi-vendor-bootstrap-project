@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>header</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.3.0-dist/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="icon" type="image/x-icon" href="../images/ficon2.png" />
+  </head>
+  <body>
+    <div class="container-fluid my-2">
+      <!-- NavBar -->
+      <nav class="navbar navbar-expand-lg row text-center">
+        <div class="container bg-light py-2 fixed-top">
+          <!-- Logo -->
+          <img
+            style="margin-right: 0; margin-left: 5%; margin-top: -15px"
+            class="navbar-brand col-1"
+            src="https://www.dubizzle.com.eg/assets/logo_noinline.feed3f3b6aa25ca2e3207a2fcdcc0b69.svg"
+            alt=""
+          />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+            <ul
+              class="navbar-nav me-auto mb-2 mb-lg-0 container row justify-content-center align-items-center"
+            >
+              <!-- Location -->
+              <div class="col-5 col-md-5 col-lg-3">
+                <div class="searchable-dropdown">
+                  <div class="search-container">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      class="fa-solid fa-location-dot search-icon"
+                    >
+                      <path
+                        d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602m0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+                      />
+                    </svg>
+                    <input
+                      type="text"
+                      class="search-input form-control fs-4 ps-5"
+                      placeholder="Search location..."
+                      id="location-search"
+                    />
+                    <span class="fw-bolder fs-5 arrow"
+                      ><i class="fa-solid fa-angle-up"></i
+                    ></span>
+                  </div>
+                  <ul class="options">
+                    <li
+                      data-value="London"
+                      class="d-flex justify-content-between"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                      >
+                        <path
+                          class="px-5"
+                          d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602m0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+                          style="fill: red"
+                        />
+                      </svg>
+                      London
+                    </li>
+                    <li
+                      data-value="Boston"
+                      class="d-flex justify-content-between"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                      >
+                        <path
+                          d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602m0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+                          style="fill: red"
+                        />
+                      </svg>
+                      Boston
+                    </li>
+                    <li
+                      data-value="Mumbai"
+                      class="d-flex justify-content-between"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                      >
+                        <path
+                          d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602m0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+                          style="fill: red"
+                        />
+                      </svg>
+                      Mumbai
+                    </li>
+                    <li
+                      data-value="New York"
+                      class="d-flex justify-content-between"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                      >
+                        <path
+                          d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602m0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+                          style="fill: red"
+                        />
+                      </svg>
+                      New York
+                    </li>
+                    <li
+                      data-value="Toronto"
+                      class="d-flex justify-content-between"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                      >
+                        <path
+                          d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602m0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+                          style="fill: red"
+                        />
+                      </svg>
+                      Toronto
+                    </li>
+                    <li
+                      data-value="Paris"
+                      class="d-flex justify-content-between"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                      >
+                        <path
+                          d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602m0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+                          style="fill: red"
+                        />
+                      </svg>
+                      Paris
+                    </li>
+                    <!-- Add more location options if needed -->
+                  </ul>
+                </div>
+              </div>
+              <!-- search -->
+              <div class="col-7 col-md-7 col-lg-5">
+                <li class="input-group">
+                  <input
+                    type="text"
+                    class="form-control fs-4"
+                    placeholder="Find Cars, Mobile Phones and more..."
+                    name="search"
+                  />
+                  <div class="input-group-btn">
+                    <button
+                      class="btn btn-default bg-danger fs-4"
+                      type="submit"
+                    >
+                      <i
+                        class="fa-solid fa-magnifying-glass"
+                        style="color: #f6f6f6"
+                      ></i>
+                    </button>
+                  </div>
+                </li>
+              </div>
+              <!-- language -->
+              <li class="nav-item col-12 col-md-4 col-lg-1">
+                <a
+                  class="nav-link active fw-bold fs-5 mx-2"
+                  aria-current="page"
+                  href="#"
+                  >العربية</a
+                >
+              </li>
+              <!-- Login -->
+              <li class="nav-item col-12 col-md-4 col-lg-1">
+                <a
+                  class="nav-link active fw-bold fs-5 mx-2 login"
+                  aria-current="page"
+                  href="#"
+                  >Login</a
+                >
+              </li>
+              <!-- Sell -->
+              <li class="nav-item col-12 col-md-4 col-lg-1">
+                <a
+                  class="btn btn-danger fw-bold px-5 fs-4"
+                  aria-current="page"
+                  href="./post.html"
+                  ><span class="fs-6">Sell</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <hr />
+      <!-- dropdown -->
+      <div class="container justify-content-between py-3 d-none d-lg-flex">
+        <!-- 1 Cat -->
+        <div class="fw-bold">
+          <div class="dropdown">
+            <a
+              class="dropdown-toggle-no-caret text-dark text-decoration-none"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Vehicles</a
+            >
+            <ul class="dropdown-menu subermenu">
+              <li><a class="dropdown-item" href="#">Cars for Sale</a></li>
+              <li><a class="dropdown-item" href="#">Cars for Rent </a></li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Tyres, Batteries, Oils, & Accessories</a
+                >
+              </li>
+              <li><a class="dropdown-item" href="#">Car Spare Parts </a></li>
+              <li>
+                <a class="dropdown-item" href="#">Motorcycles & Accessories </a>
+              </li>
+              <li><a class="dropdown-item" href="#">Boats - Watercraft </a></li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Heavy Trucks, Buses & Other Vehicles</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 2 Cat -->
+        <div class="fw-bold">
+          <div class="dropdown">
+            <a
+              class="dropdown-toggle-no-caret text-dark text-decoration-none"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Properties</a
+            >
+            <ul class="dropdown-menu subermenu">
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Apartments & Duplex for Sale
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Apartments & Duplex for Rent
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Villas For Sale </a>
+              </li>
+              <li><a class="dropdown-item" href="#">Villas For Rent </a></li>
+              <li>
+                <a class="dropdown-item" href="#">Vacation Homes for Sale </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Vacation Homes for Rent </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Commercial for Sale </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Commercial for Rent </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Buildings & Lands </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 3 Cat -->
+        <div class="fw-bold">
+          <div class="dropdown">
+            <a
+              class="dropdown-toggle-no-caret text-dark text-decoration-none"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Mobiles & Tablets
+            </a>
+            <ul class="dropdown-menu subermenu">
+              <li><a class="dropdown-item" href="#">Mobile Phones </a></li>
+              <li><a class="dropdown-item" href="#">Tablets </a></li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Mobile & Tablet Accessories
+                </a>
+              </li>
+              <li><a class="dropdown-item" href="#">Mobile Numbers </a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Split Cat -->
+        <div class="fw-bold">
+          <div class="dropdown">
+            <a
+              class="dropdown-toggle-no-caret text-dark text-decoration-none"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Jobs
+            </a>
+            <ul class="dropdown-menu subermenu px-3">
+              <div class="d-flex">
+                <div>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Accounting, Finance & Banking
+                    </a>
+                    <a class="dropdown-item" href="#">Engineering </a>
+                    <a class="dropdown-item" href="#">Designers </a>
+                    <a class="dropdown-item" href="#"
+                      >Customer Service & Call Center
+                    </a>
+                    <a class="dropdown-item" href="#"
+                      >Workers and Technicians
+                    </a>
+                    <a class="dropdown-item" href="#"
+                      >Management & Consulting
+                    </a>
+                    <a class="dropdown-item" href="#">Drivers & Delivery </a>
+                    <a class="dropdown-item" href="#">HR </a>
+                  </li>
+                </div>
+                <div>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Tourism, Travel & Hospitality
+                    </a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">IT - Telecom </a></li>
+
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Marketing and Public Relations
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Medical, Healthcare, & Nursing
+                    </a>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">Sales </a></li>
+                  <li><a class="dropdown-item" href="#">Secretarial </a></li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">Guards and Security </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">Legal - Lawyers </a>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">Other Job </a></li>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <!-- Nested Cat -->
+        <div class="fw-bold">
+          <div class="dropdown nav-item">
+            <a
+              class="dropdown-toggle-no-caret text-dark text-decoration-none"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Electronics & Appliances
+            </a>
+            <ul class="dropdown-menu subermenu">
+              <li>
+                <!-- Parent menu -->
+                <a class="dropdown-item d-flex justify-content-between" href="#"
+                  >TV - Audio - Video
+
+                  <span class="fw-bolder fs-5"
+                    ><i class="fa-solid fa-angle-right"></i></span
+                ></a>
+                <!-- Child menu -->
+                <ul class="submenu2 dropdown-menu">
+                  <li>
+                    <a class="dropdown-item fw-bold ps-1" href="#"
+                      >All TV - Audio - Video 1</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">Televisions</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">DVD - Home Theater </a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Home Audio </a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Mp3 Players - Portable audio
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Satellite TV receivers
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <!-- Parent menu -->
+                <a class="dropdown-item d-flex justify-content-between" href="#"
+                  >Computers - Accessories
+
+                  <span class="fw-bolder fs-5"
+                    ><i class="fa-solid fa-angle-right"></i></span
+                ></a>
+                <!-- Child menu -->
+                <ul class="submenu2 dropdown-menu">
+                  <li>
+                    <a class="dropdown-item fw-bold ps-1" href="#"
+                      >All Computers - Accessories
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Desktop computers </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Laptop computers </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Computer Accessories & Spare Parts
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <!-- Parent menu -->
+                <a class="dropdown-item d-flex justify-content-between" href="#"
+                  >Video games - Consoles
+                  <span class="fw-bolder fs-5"
+                    ><i class="fa-solid fa-angle-right"></i></span
+                ></a>
+                <!-- Child menu -->
+                <ul class="submenu2 dropdown-menu">
+                  <li>
+                    <a class="dropdown-item fw-bold ps-1" href="#"
+                      >All Video games - Consoles
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Video Game Consoles </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Video Games & Accessories
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <!-- Parent menu -->
+                <a class="dropdown-item d-flex justify-content-between" href="#"
+                  >Cameras - Imaging
+
+                  <span class="fw-bolder fs-5"
+                    ><i class="fa-solid fa-angle-right"></i></span
+                ></a>
+                <!-- Child menu -->
+                <ul class="submenu2 dropdown-menu">
+                  <li>
+                    <a class="dropdown-item fw-bold ps-1" href="#"
+                      >All Cameras - Imaging
+                    </a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Cameras</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Security Cameras </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Camera Accessories </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Binoculars - Telescopes
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <!-- Parent menu -->
+                <a class="dropdown-item d-flex justify-content-between" href="#"
+                  >Home Appliances
+                  <span class="fw-bolder fs-5"
+                    ><i class="fa-solid fa-angle-right"></i></span
+                ></a>
+                <!-- Child menu -->
+                <ul class="submenu2 dropdown-menu">
+                  <li>
+                    <a class="dropdown-item fw-bold ps-1" href="#"
+                      >All Home Appliances
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Refrigerators - Freezers
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Ovens - Microwaves </a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Dishwashers</a></li>
+                  <li><a class="dropdown-item" href="#">Cooking Tools </a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Washers - Dryers </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Water Coolers & Kettles
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Air conditioners & Fans
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Cleaning Appliances </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Other Home Appliances </a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Heaters</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Split Cat -->
+        <div class="fw-bold">
+          <div class="dropdown">
+            <a
+              class="dropdown-toggle-no-caret text-dark text-decoration-none"
+              href="#"
+              role="button"
+              aria-expanded="false"
+              >Jobs
+            </a>
+            <ul
+              style="margin-left: -200px"
+              class="dropdown-menu dropdown-menu-end subermenu"
+            >
+              <div class="d-flex">
+                <div>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Accounting, Finance & Banking
+                    </a>
+                    <a class="dropdown-item" href="#">Engineering </a>
+                    <a class="dropdown-item" href="#">Designers </a>
+                    <a class="dropdown-item" href="#"
+                      >Customer Service & Call Center
+                    </a>
+                    <a class="dropdown-item" href="#"
+                      >Workers and Technicians
+                    </a>
+                    <a class="dropdown-item" href="#"
+                      >Management & Consulting
+                    </a>
+                    <a class="dropdown-item" href="#">Drivers & Delivery </a>
+                    <a class="dropdown-item" href="#">HR </a>
+                  </li>
+                </div>
+                <div>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Tourism, Travel & Hospitality
+                    </a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">IT - Telecom </a></li>
+
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Marketing and Public Relations
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Medical, Healthcare, & Nursing
+                    </a>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">Sales </a></li>
+                  <li><a class="dropdown-item" href="#">Secretarial </a></li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">Guards and Security </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">Legal - Lawyers </a>
+                  </li>
+
+                  <li><a class="dropdown-item" href="#">Other Job </a></li>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <!-- Split & Nested Cat -->
+        <div class="fw-bold">
+          <div class="dropdown">
+            <a
+              class="dropdown-toggle-no-caret text-dark text-decoration-none"
+              href="#"
+              role="button"
+              aria-expanded="false"
+              ><i class="fa-solid fa-shapes text-secondary pe-2 fs-6"></i>More
+              Categories
+            </a>
+            <!-- problem -->
+            <ul
+              style="position: fixed; left: 10%; width: 80%; margin: auto"
+              class="dropdown-menu subermenu px-3"
+            >
+              <div class="d-flex" style="width: 100%">
+                <div>
+                  <!-- 1st Element -->
+                  <li>
+                    <!-- Parent menu -->
+                    <a
+                      class="dropdown-item d-flex justify-content-between"
+                      href="#"
+                      ><div class="d-flex flex-column pb-3">
+                        <div class="fw-bold">Fashion & Beauty</div>
+                        <div style="font-size: small" class="fw-light">
+                          Women’s Clothing, Men’s Clothing, Women’s Accessories
+                        </div>
+                      </div>
+
+                      <span class="fw-bolder fs-5 arrow"
+                        ><i class="fa-solid fa-angle-right"></i></span
+                    ></a>
+                    <!-- Child menu -->
+                    <ul
+                      class="submenu dropdown-menu border-0 my-2"
+                      
+                    >
+                      <li>
+                        <a class="dropdown-item fw-bold ps-1" href="#"
+                          >All in Fashion & Beauty</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Women’s Clothing</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Men’s Clothing </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Women’s Accessories - Cosmetics - Personal Care
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          Men’s Accessories - Personal Care
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- 2nd Element -->
+                  <li>
+                    <!-- Parent menu -->
+                    <a
+                      class="dropdown-item d-flex justify-content-between"
+                      href="#"
+                      ><div class="d-flex flex-column pb-3">
+                        <div class="fw-bold">Pets - Accessories</div>
+                        <div style="font-size: small" class="fw-light">
+                          Birds - Pigeons, Cats, Dogs
+                        </div>
+                      </div>
+
+                      <span class="fw-bolder fs-5 arrow"
+                        ><i class="fa-solid fa-angle-right"></i></span
+                    ></a>
+                    <!-- Child menu -->
+                    <ul
+                      class="submenu dropdown-menu border-0 my-2"
+                      
+                    >
+                      <li>
+                        <a class="dropdown-item fw-bold ps-1" href="#"
+                          >All in Pets - Accessories</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Birds - Pigeons</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Cats </a>
+                      </li>
+                      <li><a class="dropdown-item" href="#">Dogs </a></li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Other Pets & Animals
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Accessories - Pet Care Products
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- 3rd Element -->
+                  <li>
+                    <!-- Parent menu -->
+                    <a
+                      class="dropdown-item d-flex justify-content-between"
+                      href="#"
+                      ><div class="d-flex flex-column pb-3">
+                        <div class="fw-bold">Kids & Babies</div>
+                        <div style="font-size: small" class="fw-light">
+                          Baby & Mom Healthcare, Baby Clothing, Baby...
+                        </div>
+                      </div>
+
+                      <span class="fw-bolder fs-5 arrow"
+                        ><i class="fa-solid fa-angle-right"></i></span
+                    ></a>
+                    <!-- Child menu -->
+                    <ul
+                      class="submenu dropdown-menu border-0 my-2"
+                      
+                    >
+                      <li>
+                        <a class="dropdown-item fw-bold ps-1" href="#"
+                          >All in Kids & Babies</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Baby & Mom Healthcare</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> Baby Clothing </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Baby Feeding Tools
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Cribs - Strollers - Carriers
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Toys </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Other Baby Items </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- 4th Element -->
+                  <li>
+                    <!-- Parent menu -->
+                    <a
+                      class="dropdown-item d-flex justify-content-between"
+                      href="#"
+                      ><div class="d-flex flex-column pb-3">
+                        <div class="fw-bold">Books, Sports & Hobbies</div>
+                        <div style="font-size: small" class="fw-light">
+                          Antiques - Collectibles, Bicycles, Books
+                        </div>
+                      </div>
+
+                      <span class="fw-bolder fs-5 arrow"
+                        ><i class="fa-solid fa-angle-right"></i></span
+                    ></a>
+                    <!-- Child menu -->
+                    <ul
+                      class="submenu dropdown-menu border-0 my-2"
+                      
+                    >
+                      <li>
+                        <a class="dropdown-item fw-bold ps-1" href="#"
+                          >All in Books, Sports & Hobbies</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Antiques - Collectibles</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> Bicycles </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Books </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Board - Card Games
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Movies - Music </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Musical Instruments
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Sports Equipment </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Study Tools </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Tickets - Vouchers
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Luggage </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Other Items </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- 5th Element -->
+                  <li>
+                    <!-- Parent menu -->
+                    <a
+                      class="dropdown-item d-flex justify-content-between"
+                      href="#"
+                      ><div class="d-flex flex-column pb-3">
+                        <div class="fw-bold">
+                          Business - Industrial - Agriculture
+                        </div>
+                        <div style="font-size: small" class="fw-light">
+                          Agriculture, Construction, Industrial Equipment
+                        </div>
+                      </div>
+
+                      <span class="fw-bolder fs-5 arrow"
+                        ><i class="fa-solid fa-angle-right"></i></span
+                    ></a>
+                    <!-- Child menu -->
+                    <ul
+                      class="submenu dropdown-menu border-0 my-2"
+                      
+                    >
+                      <li>
+                        <a class="dropdown-item fw-bold ps-1" href="#"
+                          >All in Business - Industrial - Agriculture</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Agriculture</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> Construction </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Industrial Equipment
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Medical Equipment </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Office Furniture & Equipment
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Restaurants Equipment
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Whole Business for Sale
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Other Business, Industrial & Agriculture
+                        </a>
+                      </li>
+
+                      <li>
+                        <a class="dropdown-item" href="#">Luggage </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Other Items </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- 6 Element -->
+                  <li>
+                    <!-- Parent menu -->
+                    <a
+                      class="dropdown-item d-flex justify-content-between"
+                      href="#"
+                      ><div class="d-flex flex-column pb-3">
+                        <div class="fw-bold">Services</div>
+                        <div style="font-size: small" class="fw-light">
+                          Business, Car, Events
+                        </div>
+                      </div>
+
+                      <span class="fw-bolder fs-5 arrow"
+                        ><i class="fa-solid fa-angle-right"></i></span
+                    ></a>
+                    <!-- Child menu -->
+                    <ul
+                      class="submenu dropdown-menu border-0 my-2"
+                      
+                    >
+                      <li>
+                        <a class="dropdown-item fw-bold ps-1" href="#"
+                          >All in Services</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Business</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> Car </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Events </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Health & Beauty </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Home Services & Maintenance
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Medical </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Movers </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Pets </a>
+                      </li>
+
+                      <li>
+                        <a class="dropdown-item" href="#">Education </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Other Services </a>
+                      </li>
+                    </ul>
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="../scripts/home.js"></script> -->
+    <script>
+      function backToTop() {
+        if (window.scrollY > 1000) {
+          // console.log(window.scrollY);
+          document.getElementById("back_to_top").style.display = "block";
+        } else {
+          document.getElementById("back_to_top").style.display = "none";
+        }
+      }
+
+      // location
+
+      // Move the filterOptions function outside the $(document).ready() block
+      function filterOptions(searchText) {
+        const options = $(".options li");
+        let anyVisible = false;
+        options.each(function () {
+          const optionText = $(this).text().trim().toLowerCase();
+          if (optionText.includes(searchText)) {
+            $(this).addClass("matching"); // Add the "matching" class to matching options
+            $(this).show();
+            anyVisible = true;
+          } else {
+            $(this).removeClass("matching"); // Remove the "matching" class from non-matching options
+            $(this).hide();
+          }
+        });
+
+        // Hide the options if there are no matches
+        if (!anyVisible) {
+          $(".options").hide();
+        } else {
+          $(".options").show();
+        }
+      }
+
+      $(document).ready(function () {
+        $("#location-search").on("input", function () {
+          const searchText = $(this).val().trim().toLowerCase();
+          filterOptions(searchText); // Call the filterOptions function correctly
+          console.log(searchText);
+        });
+
+        $(".options li").click(function () {
+          const value = $(this).data("value");
+          $("#location-search").val($(this).text().trim().toLowerCase());
+          $(".options").hide();
+        });
+      });
+
+      // split & nested categories arrow
+
+      // Use jQuery hover method to show/hide the arrow
+      $(document).ready(function () {
+        $(".dropdown-item").hover(
+          function () {
+            $(this).find(".arrow").show();
+          },
+          function () {
+            $(this).find(".arrow").hide();
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

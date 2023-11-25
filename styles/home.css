@@ -1,0 +1,165 @@
+/* location */
+* {
+  /* font-size: 1vw; */
+  box-sizing: border-box;
+}
+
+.olx-color {
+  color: #e00000;
+}
+
+.olx-color:hover {
+  color: #e00000 !important;
+}
+
+/* #container {
+  width: 80%;
+} */
+
+.ancor:hover {
+  color: #4262c9 !important;
+}
+
+.img {
+  height: 10rem;
+}
+
+.section {
+  background-color: #f6f6f6;
+}
+
+.angle_div {
+  transition: 500ms;
+}
+
+.angle_a:hover .angle_div {
+  margin-left: 0.8rem !important;
+}
+
+#a {
+  position: sticky;
+  top: 10%;
+  z-index: 10;
+
+}
+
+#back_to_top {
+  display: none;
+}
+
+#back_to_top:hover {
+  background-color: rgb(255, 244, 244) !important;
+}
+
+#a:hover {
+  color: #222 !important;
+}
+
+/* /////////////////////////////////////////////// */
+.searchable-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.search-input {
+  box-sizing: border-box;
+  padding: 0px 12px 8px 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.options {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 4px;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+.options li {
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.options li:hover {
+  background-color: #f0f0f0;
+}
+
+.options li.matching {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+/* menus Categoreis */
+.submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -1px;
+  left: 30%;
+  width: fit-content;
+  height: fit-content;
+  border-left: 1px solid #d8d6d6 !important;
+  border-radius: 0;
+  margin-left: -6.5rem;
+}
+
+.arrow {
+  display: none;
+}
+
+.arrow:hover {
+  display: block;
+}
+
+.dropdown li:hover>.submenu {
+  display: block;
+}
+
+.dropdown:hover .subermenu {
+  display: block;
+}
+
+.dropdown:hover {
+  border-bottom: 1px solid black;
+}
+
+.submenu2 {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -1px;
+}
+
+.dropdown li:hover > .submenu2 {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .login {
+    border-bottom: 2px solid #e00000;
+  }
+
+  .login:hover {
+    border-bottom: none;
+  }
+}

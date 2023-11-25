@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Page</title>
+  <link rel="stylesheet" href="./bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./styles/SearchPage.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/x-icon" href="./images/ficon2.png" />
+</head>
+
+<body>
+  <div class="header"></div>
+  <div class="container d-flex mt-5">
+
+    <div class="col-md-3 d-none d-md-block line pe-3">
+      <div class="d-flex flex-column border-bottom">
+        <a href="#" class="text-decoration-none text-dark fw-bold fs-4 my-4">Cars for Sale</a>
+        <a href="#" class="text-decoration-none text-dark fw-bold font_size my-4">Filters</a>
+      </div>
+      <div class="d-flex flex-column border-bottom">
+        <div href="#" class="fw-bold mt-4 mb-3">CATEGORIES</div>
+        <a href="#" class="text-decoration-none text-black fs-6 mb-3">All categories</a>
+        <a href="#" class="text-decoration-none font_size mb-3 ms-4">Vehicles</a>
+        <a href="#" class="text-decoration-none text-dark fw-bold font_size2 mb-3 ms-5">Cars for Sale</a>
+        <a href="#" class="text-decoration-none font_size2 mb-3 ms-5">Cars for Rent</a>
+        <a href="#" class="text-decoration-none font_size2 mb-3 ms-5">Tyres, Batteries, Oils, & Accessories</a>
+        <a href="#" class="text-decoration-none font_size2 mb-3 ms-5">Car Spare Parts</a>
+        <a href="#" class="text-decoration-none font_size2 mb-3 ms-5">Motorcycles & Accessories</a>
+        <a href="#" class="text-decoration-none font_size2 mb-3 ms-5">Boats - Watercraft</a>
+        <a href="#" class="text-decoration-none font_size2 mb-4 ms-5">Heavy Trucks, Buses & Other Vehicles</a>
+      </div>
+      <div class="d-flex flex-column mt-4 me-3">
+        <div href="#" class="fw-bold mb-4">LOCATIONS</div>
+        <div class="mb-3">
+          <div class="searchable-dropdown2">
+            <div class="search-container2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                class="fa-solid fa-location-dot search-icon2">
+                <path
+                  d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602m0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" />
+              </svg>
+              <input type="text" class="search-input2 form-control fs-4 ps-5" placeholder="Search location..."
+                id="location-search2" />
+              <span class="fw-bolder fs-5 arrow"><i class="fa-solid fa-angle-up"></i></span>
+            </div>
+            <ul class="options2">
+              <li data-value="London" class="d-flex justify-content-between">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path class="px-5"
+                    d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602m0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+                    style="fill: red" />
+                </svg>
+                London
+              </li>
+              <li data-value="Boston" class="d-flex justify-content-between">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path
+                    d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602m0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+                    style="fill: red" />
+                </svg>
+                Boston
+              </li>
+              <li data-value="Mumbai" class="d-flex justify-content-between">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path
+                    d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602m0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+                    style="fill: red" />
+                </svg>
+                Mumbai
+              </li>
+              <li data-value="New York" class="d-flex justify-content-between">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path
+                    d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602m0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+                    style="fill: red" />
+                </svg>
+                New York
+              </li>
+              <li data-value="Toronto" class="d-flex justify-content-between">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path
+                    d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602m0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+                    style="fill: red" />
+                </svg>
+                Toronto
+              </li>
+              <li data-value="Paris" class="d-flex justify-content-between">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path
+                    d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602m0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"
+                    style="fill: red" />
+                </svg>
+                Paris
+              </li>
+              <!-- Add more location options if needed -->
+            </ul>
+          </div>
+        </div>
+        <a href="#" class="text-decoration-none text-dark fw-bold font_size2 ms-4 mb-3">Egypt</a>
+        <a href="#" class="text-decoration-none font_size2 mb-3 ms-5">Cairo</a>
+        <a href="#" class="text-decoration-none font_size2 mb-3 ms-5">Giza</a>
+        <a href="#" class="text-decoration-none font_size2 mb-3 ms-5">Alexandria</a>
+        <a href="#" class="text-decoration-none font_size2 mb-3 ms-5">Damietta</a>
+        <a href="#" class="text-decoration-none font_size2 mb-3 ms-5">Dakahlia</a>
+        <a href="#" class="text-decoration-none mb-3 ms-5">View more</a>
+      </div>
+      <div class="d-flex flex-column border-bottom">
+        <div href="#" class="fw-bold ms-4 mb-3">BRAND</div>
+        <a href="#" class="text-decoration-none font_size2 mb-3 ms-5"><img src="./images/alfa-romeo.png"
+            class="col-1 me-1" alt="">
+          Alfa Romeo</a>
+        <a href="#" class="text-decoration-none font_size2 mb-3 ms-5"><img src="./images/aston-martin.png"
+            class="col-1 me-1" alt="">Aston Martin</a>
+        <a href="#" class="text-decoration-none font_size2 mb-3 ms-5"><img src="./images/audi.png" class="col-1 me-1"
+            alt="">Audi</a>
+        <a href="#" class="text-decoration-none font_size2 mb-3 ms-5"><img src="./images/baic.png" class="col-1 me-1"
+            alt="">Baic</a>
+        <a href="#" class="text-decoration-none font_size2 mb-3 ms-5"><img src="./images/bentley.png" class="col-1 me-1"
+            alt="">Bentley</a>
+        <a href="#" class="text-decoration-none ms-5 mb-3">View more</a>
+      </div>
+      <div class="d-flex flex-column border-bottom mt-3">
+        <div href="#" class="fw-bold ms-4 mb-3">AD TYPE</div>
+        <div class="mb-3 ms-5">
+          <input type="checkbox" class="form-check-input">
+          <label for="">For Sale</label>
+        </div>
+        <div class="mb-3 ms-5">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Wanted Item</label>
+        </div>
+      </div>
+      <div class="d-flex flex-column border-bottom my-3">
+        <div href="#" class="fw-bold ms-4 mb-3">FUEL TYPE</div>
+        <div class="mb-3 ms-5">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Benzine</label>
+        </div>
+        <div class="mb-3 ms-5">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Diesel</label>
+        </div>
+        <div class="mb-3 ms-5">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Electric</label>
+        </div>
+        <div class="mb-3 ms-5">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Hybrid</label>
+        </div>
+        <div class="mb-3 ms-5">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Natural Gas</label>
+        </div>
+      </div>
+      <div class="d-flex flex-column border-bottom">
+        <div href="#" class="fw-bold ms-4 mb-3">PRICE</div>
+        <div class="row mb-3 ms-5">
+          <input type="text" value="6,000" class="col-5 bg-secondary bg-opacity-25 fs-5 border-bottom my-2 border-0">
+          <div class="col-1"></div>
+          <input type="text" value="8,000" class="col-5 bg-secondary bg-opacity-25 fs-5 border-bottom my-2 border-0">
+        </div>
+      </div>
+      <div class="d-flex flex-column border-bottom">
+        <div href="#" class="fw-bold ms-4 mb-3 mt-3">PAYMENT OPTIONS</div>
+        <div class="mb-3 ms-5">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Cash</label>
+        </div>
+        <div class="mb-3 ms-5">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Installments</label>
+        </div>
+        <div class="mb-3 ms-5">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Exchange</label>
+        </div>
+      </div>
+      <div class="d-flex flex-column border-bottom">
+        <div href="#" class="fw-bold ms-4 mb-3 mt-3">YEAR</div>
+        <div class="row mb-3 ms-5">
+          <input type="text" value="1900" class="col-3 bg-secondary bg-opacity-25 fs-5 border-bottom my-2 border-0">
+          <div class="col-1"></div>
+          <input type="text" value="2023" class="col-3 bg-secondary bg-opacity-25 fs-5 border-bottom my-2 border-0">
+        </div>
+      </div>
+      <div class="d-flex flex-column border-bottom">
+        <div href="#" class="fw-bold ms-4 mb-3 mt-3">KILOMETERS</div>
+        <div class="mb-3 ms-5">
+          <input type="checkbox" class="form-check-input">
+          <label for="">0 to 9999</label>
+        </div>
+        <div class="mb-3 ms-5">
+          <input type="checkbox" class="form-check-input">
+          <label for=""> 100000 to 119999</label>
+        </div>
+        <div class="mb-3 ms-5">
+          <input type="checkbox" class="form-check-input">
+          <label for="">10000 to 19999</label>
+        </div>
+        <div class="mb-3 ms-5">
+          <input type="checkbox" class="form-check-input">
+          <label for="">More than 200000</label>
+        </div>
+        <div class="mb-3 ms-5">
+          <input type="checkbox" class="form-check-input">
+          <label for="">120000 to 139999</label>
+        </div>
+        <a href="#" class="text-decoration-none mb-3 ms-5">View more</a>
+      </div>
+      <div class="d-flex flex-column border-bottom mt-3">
+        <div href="#" class="fw-bold ms-4 mb-3">TRANSMISSION TYPE</div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Automatic</label>
+        </div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Manual</label>
+        </div>
+      </div>
+      <div class="d-flex flex-column border-bottom my-3">
+        <div href="#" class="fw-bold ms-4 mb-3">CONDITION</div>
+        <div>
+          <input type="checkbox" class="form-check-input ms-4 mb-3">
+          <label for="">Used</label>
+        </div>
+        <div>
+          <input type="checkbox" class="form-check-input ms-4 mb-3">
+          <label for="">New</label>
+        </div>
+      </div>
+      <div class="d-flex flex-column border-bottom">
+        <div href="#" class="fw-bold ms-4 mb-3">COLOR</div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Black</label>
+        </div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">White</label>
+        </div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Gray</label>
+        </div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Blue- Navy Blue</label>
+        </div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Silver</label>
+        </div>
+
+        <a href="#" class="text-decoration-none ms-4 mb-3">View more</a>
+      </div>
+      <div class="d-flex flex-column border-bottom mt-3">
+        <div href="#" class="fw-bold ms-4 mb-3">BODY TYPE</div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Sedan</label>
+        </div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">SUV</label>
+        </div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Hatchback</label>
+        </div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">4X4</label>
+        </div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Coupe</label>
+        </div>
+        <a href="#" class="text-decoration-none ms-4 mb-3">View more</a>
+      </div>
+      <div class="d-flex flex-column border-bottom mt-3">
+        <div href="#" class="fw-bold ms-4 mb-3">ENGINE CAPACITY (CC)</div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">1600</label>
+        </div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">1400 - 1500</label>
+        </div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">1800 - 2000</label>
+        </div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">1000 - 1300</label>
+          <div class="mt-3">
+            <input type="checkbox" class="form-check-input">
+            <label for="">More than 3000</label>
+          </div>
+        </div>
+        <a href="#" class="text-decoration-none ms-4 mb-3">View more</a>
+      </div>
+      <div class="d-flex flex-column border-bottom mt-3">
+        <div href="#" class="fw-bold ms-4 mb-3">EXTRA FEATURES</div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Air Conditioning</label>
+        </div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">AM/FM Radio</label>
+        </div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Power Windows</label>
+        </div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Power Locks</label>
+        </div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Bluetooth System</label>
+        </div>
+        <a href="#" class="text-decoration-none ms-4 mb-3">View more</a>
+      </div>
+      <div class="border-bottom mt-3">
+        <div href="#" class="fw-bold ms-4 mb-3">VIDEO</div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Not Available</label>
+        </div>
+      </div>
+      <div class="border-bottom mt-3">
+        <div href="#" class="fw-bold ms-4 mb-3">VIRTUAL TOUR</div>
+        <div class="ms-4 mb-3">
+          <input type="checkbox" class="form-check-input">
+          <label for="">Not Available</label>
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------------------------- -->
+    <div class="col-md-9 col-12">
+      <div class="row">
+        <div href="#" class="row">
+          <div class="col-10"></div>
+          <div class="col-2 btn border-danger w-auto mb-2" id="Save_search ">
+            <i class="fa-regular fa-heart fs-5 text-danger"></i> Save search
+          </div>
+        </div>
+      </div>
+      <div class="row bg-secondary bg-opacity-10 pb-3">
+        <div class="fs-5 fw-bold my-3">Featured Businesses</div>
+        <div class="container-fluid">
+          <div class="container">
+            <div class="row">
+              <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row d-flex">
+                      <div class="col-2">
+                        <img src="images/slidicon1.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">Car Accident</div>
+                      </div>
+                      <div class="col-2">
+                        <img src="images/slidicon2.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">Car Accident</div>
+                      </div>
+                      <div class="col-2">
+                        <img src="images/slidicon1.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">Car Accident</div>
+                      </div>
+                      <div class="col-2">
+                        <img src="images/slidicon2.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">Car Accident</div>
+                      </div>
+                      <div class="col-2">
+                        <img src="images/slidicon1.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">Car Accident</div>
+                      </div>
+                      <div class="col-2">
+                        <img src="images/slidicon2.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">Car Accident</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <div class="row d-flex">
+                      <div class="col-2">
+                        <img src="images/slidicon3.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">El Rawas Motors</div>
+                      </div>
+                      <div class="col-2">
+                        <img src="images/slidicon4.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">El Rawas Motors</div>
+                      </div>
+                      <div class="col-2">
+                        <img src="images/slidicon3.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">El Rawas Motors</div>
+                      </div>
+                      <div class="col-2">
+                        <img src="images/slidicon4.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">El Rawas Motors</div>
+                      </div>
+                      <div class="col-2">
+                        <img src="images/slidicon3.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">El Rawas Motors</div>
+                      </div>
+                      <div class="col-2">
+                        <img src="images/slidicon4.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">El Rawas Motors</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="row d-flex">
+                      <div class="col-2">
+                        <img src="images/slidicon5.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">El-Eman Electric</div>
+                      </div>
+                      <div class="col-2">
+                        <img src="images/slidicon6.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">El-Eman Electric</div>
+                      </div>
+                      <div class="col-2">
+                        <img src="images/slidicon5.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">El-Eman Electric</div>
+                      </div>
+                      <div class="col-2">
+                        <img src="images/slidicon6.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">El-Eman Electric</div>
+                      </div>
+                      <div class="col-2">
+                        <img src="images/slidicon5.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">El-Eman Electric</div>
+                      </div>
+                      <div class="col-2">
+                        <img src="images/slidicon6.jpeg" class="d-block w-75" alt="">
+                        <div class="text-decoration-underline">El-Eman Electric</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                  data-bs-slide="prev">
+                  <span class="" aria-hidden="true" style="margin-right:105% ;"><i class="fa-solid fa-angle-left fs-1"
+                      style="color: #000000;"></i></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                  data-bs-slide="next">
+                  <span class="" aria-hidden="true" style="margin-left:105% ;"><i class="fa-solid fa-angle-right fs-1"
+                      style="color: #000000;"></i></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div>
+        <div class="row border-bottom">
+          <div class="col-6"></div>
+          <div class="col-6 row justify-content-end">
+            <div class=" col-6 w-auto border-end">
+              <input type="checkbox" class="form-check-input">
+              <label class="font_size" for="">Only with photos</label>
+            </div>
+            <div class="col-6 font_size2 fw-bold"> SORT BY: Newly listed Sort</div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between m-3">
+          <div class="col-2">Featured ads</div>
+          <a href="#" class="text-decoration-none ms-5">View more</a>
+        </div>
+        <div>
+          <div class="card mb-3 col-12">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/carcard1.jpeg" class="img-fluid rounded-start w-100 overflow-hidden w-100"
+                  style="max-height: 250px;" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between card-title ">
+                    <h5 class="fw-bold fs-4 price">EGP 270,000</h5>
+                    <i class="fa-regular fa-heart fs-5"></i>
+                  </div>
+                  <p class="card-text">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة</p>
+                  <p class="card-text"><small class="text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                        <path
+                          d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                      </svg> 90000 to 999999 km. 2019</small></p>
+                  <p class="card-text"><small class="text-body-secondary">Nasr City, Cairo . 4 days ago</small></p>
+
+                  <div class="col-2 btn border-danger rounded-2 p-2 me-3 text-white fw-bold cllbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg> Call</div>
+
+                  <div class="col-2 btn border-danger rounded-2 fw-bold p-2 chatbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e00000" class="bi bi-chat-dots"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                      <path
+                        d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                    </svg> Chat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 col-12">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/carcard2.jpeg" class="img-fluid rounded-start w-100 overflow-hidden w-100"
+                  style="height:100%;" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between card-title ">
+                    <h5 class="fw-bold fs-4 price">EGP 270,000</h5>
+                    <i class="fa-regular fa-heart fs-5"></i>
+                  </div>
+                  <p class="card-text">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة</p>
+                  <p class="card-text"><small class="text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                        <path
+                          d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                      </svg> 90000 to 999999 km. 2019</small></p>
+                  <p class="card-text"><small class="text-body-secondary">Nasr City, Cairo . 4 days ago</small></p>
+
+                  <div class="col-2 btn border-danger rounded-2 p-2 me-3 text-white fw-bold cllbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg> Call</div>
+
+                  <div class="col-2 btn border-danger rounded-2 fw-bold p-2 chatbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e00000" class="bi bi-chat-dots"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                      <path
+                        d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                    </svg> Chat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 col-12">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/carcard3.jpeg" class="img-fluid rounded-start w-100 overflow-hidden w-100"
+                  style="max-height: 250px;" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between card-title ">
+                    <h5 class="fw-bold fs-4 price">EGP 270,000</h5>
+                    <i class="fa-regular fa-heart fs-5"></i>
+                  </div>
+                  <p class="card-text">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة</p>
+                  <p class="card-text"><small class="text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                        <path
+                          d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                      </svg> 90000 to 999999 km. 2019</small></p>
+                  <p class="card-text"><small class="text-body-secondary">Nasr City, Cairo . 4 days ago</small></p>
+
+                  <div class="col-2 btn border-danger rounded-2 p-2 me-3 text-white fw-bold cllbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg> Call</div>
+
+                  <div class="col-2 btn border-danger rounded-2 fw-bold p-2 chatbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e00000" class="bi bi-chat-dots"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                      <path
+                        d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                    </svg> Chat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 col-12">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/carcard4.jpeg" class="img-fluid rounded-start w-100 overflow-hidden w-100"
+                  style="height:100%;" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between card-title ">
+                    <h5 class="fw-bold fs-4 price">EGP 270,000</h5>
+                    <i class="fa-regular fa-heart fs-5"></i>
+                  </div>
+                  <p class="card-text">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة</p>
+                  <p class="card-text"><small class="text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                        <path
+                          d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                      </svg> 90000 to 999999 km. 2019</small></p>
+                  <p class="card-text"><small class="text-body-secondary">Nasr City, Cairo . 4 days ago</small></p>
+
+                  <div class="col-2 btn border-danger rounded-2 p-2 me-3 text-white fw-bold cllbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg> Call</div>
+
+                  <div class="col-2 btn border-danger rounded-2 fw-bold p-2 chatbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e00000" class="bi bi-chat-dots"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                      <path
+                        d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                    </svg> Chat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 col-12">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/carcard5.jpeg" class="img-fluid rounded-start w-100 overflow-hidden w-100"
+                  style="height:100%;" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between card-title ">
+                    <h5 class="fw-bold fs-4 price">EGP 270,000</h5>
+                    <i class="fa-regular fa-heart fs-5"></i>
+                  </div>
+                  <p class="card-text">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة</p>
+                  <p class="card-text"><small class="text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                        <path
+                          d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                      </svg> 90000 to 999999 km. 2019</small></p>
+                  <p class="card-text"><small class="text-body-secondary">Nasr City, Cairo . 4 days ago</small></p>
+
+                  <div class="col-2 btn border-danger rounded-2 p-2 me-3 text-white fw-bold cllbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg> Call</div>
+
+                  <div class="col-2 btn border-danger rounded-2 fw-bold p-2 chatbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e00000" class="bi bi-chat-dots"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                      <path
+                        d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                    </svg> Chat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 col-12">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/carcard1.jpeg" class="img-fluid rounded-start w-100 overflow-hidden w-100"
+                  style="max-height: 250px;" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between card-title ">
+                    <h5 class="fw-bold fs-4 price">EGP 270,000</h5>
+                    <i class="fa-regular fa-heart fs-5"></i>
+                  </div>
+                  <p class="card-text">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة</p>
+                  <p class="card-text"><small class="text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                        <path
+                          d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                      </svg> 90000 to 999999 km. 2019</small></p>
+                  <p class="card-text"><small class="text-body-secondary">Nasr City, Cairo . 4 days ago</small></p>
+
+                  <div class="col-2 btn border-danger rounded-2 p-2 me-3 text-white fw-bold cllbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg> Call</div>
+
+                  <div class="col-2 btn border-danger rounded-2 fw-bold p-2 chatbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e00000" class="bi bi-chat-dots"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                      <path
+                        d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                    </svg> Chat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 col-12">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/carcard2.jpeg" class="img-fluid rounded-start w-100 overflow-hidden w-100"
+                  style="height:100%;" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between card-title ">
+                    <h5 class="fw-bold fs-4 price">EGP 270,000</h5>
+                    <i class="fa-regular fa-heart fs-5"></i>
+                  </div>
+                  <p class="card-text">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة</p>
+                  <p class="card-text"><small class="text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                        <path
+                          d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                      </svg> 90000 to 999999 km. 2019</small></p>
+                  <p class="card-text"><small class="text-body-secondary">Nasr City, Cairo . 4 days ago</small></p>
+
+                  <div class="col-2 btn border-danger rounded-2 p-2 me-3 text-white fw-bold cllbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg> Call</div>
+
+                  <div class="col-2 btn border-danger rounded-2 fw-bold p-2 chatbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e00000" class="bi bi-chat-dots"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                      <path
+                        d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                    </svg> Chat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 col-12">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/carcard3.jpeg" class="img-fluid rounded-start w-100 overflow-hidden w-100"
+                  style="max-height: 250px;" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between card-title ">
+                    <h5 class="fw-bold fs-4 price">EGP 270,000</h5>
+                    <i class="fa-regular fa-heart fs-5"></i>
+                  </div>
+                  <p class="card-text">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة</p>
+                  <p class="card-text"><small class="text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                        <path
+                          d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                      </svg> 90000 to 999999 km. 2019</small></p>
+                  <p class="card-text"><small class="text-body-secondary">Nasr City, Cairo . 4 days ago</small></p>
+
+                  <div class="col-2 btn border-danger rounded-2 p-2 me-3 text-white fw-bold cllbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg> Call</div>
+
+                  <div class="col-2 btn border-danger rounded-2 fw-bold p-2 chatbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e00000" class="bi bi-chat-dots"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                      <path
+                        d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                    </svg> Chat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 col-12">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/carcard4.jpeg" class="img-fluid rounded-start w-100 overflow-hidden w-100"
+                  style="height:100%;" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between card-title ">
+                    <h5 class="fw-bold fs-4 price">EGP 270,000</h5>
+                    <i class="fa-regular fa-heart fs-5"></i>
+                  </div>
+                  <p class="card-text">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة</p>
+                  <p class="card-text"><small class="text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                        <path
+                          d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                      </svg> 90000 to 999999 km. 2019</small></p>
+                  <p class="card-text"><small class="text-body-secondary">Nasr City, Cairo . 4 days ago</small></p>
+
+                  <div class="col-2 btn border-danger rounded-2 p-2 me-3 text-white fw-bold cllbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg> Call</div>
+
+                  <div class="col-2 btn border-danger rounded-2 fw-bold p-2 chatbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e00000" class="bi bi-chat-dots"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                      <path
+                        d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                    </svg> Chat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 col-12">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/carcard5.jpeg" class="img-fluid rounded-start w-100 overflow-hidden w-100"
+                  style="height:100%;" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between card-title ">
+                    <h5 class="fw-bold fs-4 price">EGP 270,000</h5>
+                    <i class="fa-regular fa-heart fs-5"></i>
+                  </div>
+                  <p class="card-text">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة</p>
+                  <p class="card-text"><small class="text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                        <path
+                          d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                      </svg> 90000 to 999999 km. 2019</small></p>
+                  <p class="card-text"><small class="text-body-secondary">Nasr City, Cairo . 4 days ago</small></p>
+
+                  <div class="col-2 btn border-danger rounded-2 p-2 me-3 text-white fw-bold cllbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg> Call</div>
+
+                  <div class="col-2 btn border-danger rounded-2 fw-bold p-2 chatbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e00000" class="bi bi-chat-dots"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                      <path
+                        d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                    </svg> Chat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 col-12">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/carcard1.jpeg" class="img-fluid rounded-start w-100 overflow-hidden w-100"
+                  style="max-height: 250px;" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between card-title ">
+                    <h5 class="fw-bold fs-4 price">EGP 270,000</h5>
+                    <i class="fa-regular fa-heart fs-5"></i>
+                  </div>
+                  <p class="card-text">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة</p>
+                  <p class="card-text"><small class="text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                        <path
+                          d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                      </svg> 90000 to 999999 km. 2019</small></p>
+                  <p class="card-text"><small class="text-body-secondary">Nasr City, Cairo . 4 days ago</small></p>
+
+                  <div class="col-2 btn border-danger rounded-2 p-2 me-3 text-white fw-bold cllbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg> Call</div>
+
+                  <div class="col-2 btn border-danger rounded-2 fw-bold p-2 chatbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e00000" class="bi bi-chat-dots"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                      <path
+                        d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                    </svg> Chat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 col-12">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/carcard2.jpeg" class="img-fluid rounded-start w-100 overflow-hidden w-100"
+                  style="height:100%;" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between card-title ">
+                    <h5 class="fw-bold fs-4 price">EGP 270,000</h5>
+                    <i class="fa-regular fa-heart fs-5"></i>
+                  </div>
+                  <p class="card-text">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة</p>
+                  <p class="card-text"><small class="text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                        <path
+                          d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                      </svg> 90000 to 999999 km. 2019</small></p>
+                  <p class="card-text"><small class="text-body-secondary">Nasr City, Cairo . 4 days ago</small></p>
+
+                  <div class="col-2 btn border-danger rounded-2 p-2 me-3 text-white fw-bold cllbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg> Call</div>
+
+                  <div class="col-2 btn border-danger rounded-2 fw-bold p-2 chatbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e00000" class="bi bi-chat-dots"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                      <path
+                        d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                    </svg> Chat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 col-12">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/carcard3.jpeg" class="img-fluid rounded-start w-100 overflow-hidden w-100"
+                  style="max-height: 250px;" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between card-title ">
+                    <h5 class="fw-bold fs-4 price">EGP 270,000</h5>
+                    <i class="fa-regular fa-heart fs-5"></i>
+                  </div>
+                  <p class="card-text">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة</p>
+                  <p class="card-text"><small class="text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                        <path
+                          d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                      </svg> 90000 to 999999 km. 2019</small></p>
+                  <p class="card-text"><small class="text-body-secondary">Nasr City, Cairo . 4 days ago</small></p>
+
+                  <div class="col-2 btn border-danger rounded-2 p-2 me-3 text-white fw-bold cllbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg> Call</div>
+
+                  <div class="col-2 btn border-danger rounded-2 fw-bold p-2 chatbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e00000" class="bi bi-chat-dots"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                      <path
+                        d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                    </svg> Chat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 col-12">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/carcard4.jpeg" class="img-fluid rounded-start w-100 overflow-hidden w-100"
+                  style="height:100%;" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between card-title ">
+                    <h5 class="fw-bold fs-4 price">EGP 270,000</h5>
+                    <i class="fa-regular fa-heart fs-5"></i>
+                  </div>
+                  <p class="card-text">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة</p>
+                  <p class="card-text"><small class="text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                        <path
+                          d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                      </svg> 90000 to 999999 km. 2019</small></p>
+                  <p class="card-text"><small class="text-body-secondary">Nasr City, Cairo . 4 days ago</small></p>
+
+                  <div class="col-2 btn border-danger rounded-2 p-2 me-3 text-white fw-bold cllbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg> Call</div>
+
+                  <div class="col-2 btn border-danger rounded-2 fw-bold p-2 chatbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e00000" class="bi bi-chat-dots"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                      <path
+                        d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                    </svg> Chat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3 col-12">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/carcard5.jpeg" class="img-fluid rounded-start w-100 overflow-hidden w-100"
+                  style="height:100%;" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between card-title ">
+                    <h5 class="fw-bold fs-4 price">EGP 270,000</h5>
+                    <i class="fa-regular fa-heart fs-5"></i>
+                  </div>
+                  <p class="card-text">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة</p>
+                  <p class="card-text"><small class="text-body-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                        <path
+                          d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                      </svg> 90000 to 999999 km. 2019</small></p>
+                  <p class="card-text"><small class="text-body-secondary">Nasr City, Cairo . 4 days ago</small></p>
+
+                  <div class="col-2 btn border-danger rounded-2 p-2 me-3 text-white fw-bold cllbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-telephone" viewBox="0 0 16 16">
+                      <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg> Call</div>
+
+                  <div class="col-2 btn border-danger rounded-2 fw-bold p-2 chatbtn"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#e00000" class="bi bi-chat-dots"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                      <path
+                        d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+                    </svg> Chat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="row mb-4 mt-4 col-6 d-flex justify-content-between">
+          <div class="col-1">
+            <input type="radio" name="number" class="btn-check" id="one">
+            <label class="btn btn-outline-danger rounded-5 " for="one">1</label>
+          </div>
+          <div class="col-1">
+            <input type="radio" name="number" class="btn-check" id="two">
+            <label class="btn btn-outline-danger rounded-5" for="two">2</label>
+          </div>
+          <div class="col-1">
+            <input type="radio" name="number" class="btn-check" id="three">
+            <label class="btn btn-outline-danger rounded-5" for="three">3</label>
+          </div>
+          <div class="col-1">
+            <input type="radio" name="number" class="btn-check" id="four">
+            <label class="btn btn-outline-danger rounded-5" for="four">4</label>
+          </div>
+          <div class="col-1">
+            <input type="radio" name="number" class="btn-check" id="five">
+            <label class="btn btn-outline-danger rounded-5" for="five">5</label>
+          </div>
+
+          <button class="col-1 btn btn-outline-danger rounded-5 ms-2"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+              height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+              <path
+                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+            </svg></button>
+        </div>
+      </div>
+      <div class="row fw-bold border-bottom">Recently viewed</div>
+      <div class="row  d-flex justify-content-between my-3">
+        <div class="col-4">
+          <div class="card card_font me-1">
+            <img class="card-img w-100 img" src="./images/carcard1.jpeg" alt />
+            <div class="p-3">
+              <div class="row">
+                <div class="col-10 fs-5 fw-bold price">EGP 4,000</div>
+                <div class="col-2">
+                  <i class="fa-regular fa-heart fs-4"></i>
+                </div>
+              </div>
+              <div class="card-title opacity-75">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة
+              </div>
+              <div class="opacity-75">Nasr City, Cairo</div>
+              <div class="opacity-75">2 days ago</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card card_font me-1">
+            <img class="card-img w-100 img" src="./images/carcard3.jpeg" alt />
+            <div class="p-3">
+              <div class="row">
+                <div class="col-10 fs-5 fw-bold price">EGP 4,000</div>
+                <div class="col-2">
+                  <i class="fa-regular fa-heart fs-4"></i>
+                </div>
+              </div>
+              <div class="card-title opacity-75">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة
+              </div>
+              <div class="opacity-75">Nasr City, Cairo</div>
+              <div class="opacity-75">2 days ago</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card card_font me-1">
+            <img class="card-img w-100 img" src="./images/carcard1.jpeg" alt />
+            <div class="p-3">
+              <div class="row">
+                <div class="col-10 fs-5 fw-bold price">EGP 4,000</div>
+                <div class="col-2">
+                  <i class="fa-regular fa-heart fs-4"></i>
+                </div>
+              </div>
+              <div class="card-title opacity-75">تيجو ٧ بيز لاين السيارة الافضل في فئتها قيمة مقابل سعر بمعني الكلمة
+              </div>
+              <div class="opacity-75">Nasr City, Cairo</div>
+              <div class="opacity-75">2 days ago</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="footer"></div>
+  <script>
+
+
+    // Function to load and insert HTML content
+
+    //   
+    function loadAndInsert(url, targetElement) {
+      fetch(url)
+        .then((response) => response.text())
+        .then((content) => {
+          document.querySelector(targetElement).innerHTML = content;
+          const scripts = document.querySelectorAll(`${targetElement} script`);
+          scripts.forEach((script) => {
+            const newScript = document.createElement("script");
+            newScript.textContent = script.textContent;
+            document.querySelector(targetElement).appendChild(newScript);
+          });
+        })
+        .catch((error) => {
+          console.error("Error loading " + url, error);
+        });
+    }
+
+
+
+
+    // Load header.html and insert into <header> element
+
+    loadAndInsert("./h&f/header.html", ".header");
+
+    // Load footer.html and insert into <footer> element
+
+
+
+    /////////////////////////////////////// locaaaaaaaaaaaaaaation
+    loadAndInsert("./h&f/footer.html", ".footer");
+    function filterOptions(searchText2) {
+      const options2 = $(".options2 li");
+      let anyVisible2 = false;
+      options.each(function () {
+        const optionText2 = $(this).text().trim().toLowerCase();
+        if (optionText2.includes(searchText2)) {
+          $(this).addClass("matching"); // Add the "matching" class to matching options
+          $(this).show();
+          anyVisible2 = true;
+        } else {
+          $(this).removeClass("matching"); // Remove the "matching" class from non-matching options
+          $(this).hide();
+        }
+      });
+
+      // Hide the options2 if there are no matches
+      if (!anyVisible2) {
+        $(".options2").hide();
+      } else {
+        $(".options2").show();
+      }
+    }
+
+    $(document).ready(function () {
+      $("#location-search2").on("input", function () {
+        const searchText2 = $(this).val().trim().toLowerCase();
+        filterOptions(searchText2); // Call the filteroptions2 function correctly
+        console.log(searchText2);
+      });
+
+      $(".options2 li").click(function () {
+        const value2 = $(this).data("value2");
+        $("#location-search2").val($(this).text().trim().toLowerCase());
+        $(".options2").hide();
+      });
+    });
+
+  </script>
+
+  <script src="./bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="JQuery/jquery-3.7.0.min.js"></script>
+  <script src="./scripts/search.js"></script>
+</body>
+
+</html>
